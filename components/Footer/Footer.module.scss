@@ -1,0 +1,12 @@
+.footer {
+  @apply flex justify-between items-center px-[10px] py-[14px];
+
+  .leftSection,
+  .rightSection {
+    @apply flex;
+
+    > p {
+      @apply dark:text-label-2 text-label-2-w font-bold text-[14px];
+    }
+  }
+}

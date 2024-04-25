@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Manrope;
+  src: url("../public/Manrope-wght.woff2") format("woff2");
+}
+
+:root {
+  @apply flex justify-center dark:bg-black bg-white lg:px-[240px] py-[10px] select-none h-full px-[20px];
+}
+
+.container {
+  @apply flex flex-col gap-[10px] h-full max-w-screen-lg;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-manrope;
+}
+
+.green {
+  @apply dark:bg-[#203426] bg-[#abe4bc];
+}
+
+.yellow {
+  @apply dark:bg-[#343420] bg-[#ebebb6];
+}
+
+.orange {
+  @apply dark:bg-[#342A20] bg-[#ecd2b7];
+}
+
+.blue {
+  @apply dark:bg-[#202234] bg-[#acb2e4];
+}

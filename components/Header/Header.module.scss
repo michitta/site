@@ -1,0 +1,31 @@
+.header {
+  @apply flex px-[10px] py-[14px] items-center justify-between;
+
+  .leftSection {
+    @apply flex items-center gap-[20px];
+
+    > h1 {
+      @apply text-[20px] font-bold dark:text-white text-black;
+    }
+
+    .navBar {
+      @apply flex gap-[14px] font-semibold text-[14px];
+
+      > a {
+        @apply dark:text-label-2 text-label-2-w transition-colors;
+
+        &:hover {
+          @apply dark:text-white text-black;
+        }
+      }
+
+      .active {
+        @apply dark:text-white text-black;
+      }
+    }
+  }
+
+  > p {
+    @apply font-bold text-[14px] dark:text-label-2 text-label-2-w;
+  }
+}
