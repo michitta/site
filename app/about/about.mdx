@@ -1,0 +1,56 @@
+import HintComponent from "@/components/Hint/Hint.component";
+import { TagHintColor } from "@/enums";
+import { backend, devops, educations, frontend, launguages } from "@/constus";
+import TagsComponent from "@/components/Tags/Tags.component";
+import styles from "./page.module.scss";
+
+# Обо мне
+
+Привет, я michitta (псевдоним)! Я занимаюсь frontend-разработкой с 2021 года и обладаю широкими знаниями в областях веб-дизайна, backend-разработки и devops.
+
+Добро пожаловать в моё цифровое пространство, где я собрал свои проекты, полезные ресурсы и веду блог, посвящённый моей профессиональной деятельности. Загляните в блог или на страницу проектов, чтобы увидеть проекты с открытым и закрытым исходным кодом!
+
+# Мои навыки
+
+<div>
+  <div className={styles.tag}>
+    <p>Frontend</p>
+    <HintComponent color={TagHintColor.GREEN} />
+  </div>
+  <TagsComponent obj={frontend} />
+</div>
+
+<div>
+  <div className={styles.tag}>
+    <p>Backend</p>
+    <HintComponent color={TagHintColor.GREEN} />
+    <HintComponent color={TagHintColor.YELLOW} />
+  </div>
+  <TagsComponent obj={backend} />
+</div>
+
+<div>
+  <div className={styles.tag}>
+    <p>DevOps</p>
+    <HintComponent color={TagHintColor.GREEN} />
+  </div>
+  <TagsComponent obj={devops} />
+</div>
+
+<div>
+  <div className={styles.tag}>
+    <p>Языки программирования</p>
+    <HintComponent color={TagHintColor.GREEN} />
+    <HintComponent color={TagHintColor.YELLOW} />
+  </div>
+  <TagsComponent obj={launguages} />
+</div>
+
+<div>
+  <div className={styles.tag}>
+    <p>Образование</p>
+    <HintComponent color={TagHintColor.ORANGE} />
+    <HintComponent color={TagHintColor.BLUE} />
+  </div>
+  <TagsComponent obj={educations} />
+</div>

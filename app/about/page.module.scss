@@ -2,38 +2,10 @@
   @apply flex flex-col h-full gap-[40px] px-[20px] py-[28px] rounded-[24px] dark:bg-background-1-t bg-background-1-t-w border dark:border-label-5 border-label-5-w;
 
   > div {
-    @apply flex flex-col gap-[24px];
+    @apply flex flex-col gap-[12px];
   }
 
-  .about {
-    > h1 {
-      @apply dark:text-white text-black text-[32px] leading-[24px] font-bold;
-    }
-
-    > p {
-      @apply dark:text-white text-black text-[16px] font-medium;
-    }
-  }
-
-  .skillList {
-    > h2 {
-      @apply dark:text-white text-black text-[32px] leading-[24px] font-bold;
-    }
-
-    .skills {
-      @apply flex flex-col gap-[16px];
-
-      .skill {
-        @apply flex flex-col gap-[12px];
-
-        .top {
-          @apply flex gap-[12px] items-center;
-
-          > p {
-            @apply dark:text-white text-black text-[16px] font-medium;
-          }
-        }
-      }
-    }
+  .tag {
+    @apply flex gap-[12px] items-center;
   }
 }
