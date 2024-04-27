@@ -2,8 +2,6 @@ import { existsSync } from "node:fs";
 import { glob } from "glob";
 import { join, sep } from "node:path";
 
-// Была хорошая разработка, но ггвп
-
 export const cachedMardownFiles = new Map();
 
 export const getMDXRoutes = async () => {
@@ -27,7 +25,7 @@ export const getMDXRoutes = async () => {
     let filePath = join(process.cwd(), "mdx", fileName);
 
     if (existsSync(filePath)) {
-      cachedMardownFiles.set(pathName, filePath);
+      cachedMardownFiles.set(pathName, fileName);
     }
   });
 };

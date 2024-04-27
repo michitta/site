@@ -1,21 +1,25 @@
 import { getMDXPath } from "@/next.dynamic";
 import { FC } from "react"
 import dynamic from "next/dynamic";
-
-const DynamicMDXComponent = ({ path }: { path: string }) => {
-    const MDXContent = dynamic(() => import(path));
-    return <MDXContent />
-}
+import NotFound from "../not-found";
 
 const Page: FC<{ params: { page: string[] } }> = async ({ params }) => {
-    console.log(params)
-    const path = params?.page?.join("/");
-    const file = await getMDXPath(path.replaceAll('\\', '/'));
+    // Получаем патч
+    const path = params?.page ? params?.page?.join("/") : "index";
 
+    // Получаем контент
+    const file = await getMDXPath(path?.replaceAll('\\', '/'));
+
+    // Импортируем MDXComponent
+    const DynamicMDXComponent = dynamic(async () => await import("../../mdx/" + file));
 
     return (
-        <main>
-            <DynamicMDXComponent path={file} />
+        <main className="main">
+            {
+                file ?
+                    <DynamicMDXComponent /> :
+                    <NotFound />
+            }
         </main>
     )
 }
