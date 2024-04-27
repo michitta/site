@@ -13,8 +13,8 @@ export default function () {
                 <nav className={styles.navBar}>
                     <Link href={'/'} className={path === '/' ? styles.active : ''}>Главная</Link>
                     <Link href={'/about'} className={path === '/about' ? styles.active : ''}>Обо мне</Link>
-                    {/* <Link href={'/blog'} className={path === '/blog' ? styles.active : ''}>Блог</Link>
-                    <Link href={'/projects'} className={path === '/projects' ? styles.active : ''}>Проекты</Link> */}
+                    <Link href={'/blog'} className={path === '/blog' ? styles.active : ''}>Блог</Link>
+                    {/* <Link href={'/projects'} className={path === '/projects' ? styles.active : ''}>Проекты</Link> */}
                     <Link href={'https://github.com/michitta'} className="after:content-['_↗']">GitHub</Link>
                 </nav>
             </div>
