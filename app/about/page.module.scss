@@ -1,5 +1,5 @@
 .page {
-  @apply flex flex-col h-full gap-[40px] px-[20px] py-[28px] rounded-[24px] dark:bg-background-1-t bg-background-1-t-w border dark:border-label-5 border-label-5-w;
+  @apply flex flex-col h-full gap-[20px] px-[20px] py-[14px] rounded-[24px] dark:bg-background-1-t bg-background-1-t-w border dark:border-label-5 border-label-5-w;
 
   > div {
     @apply flex flex-col gap-[12px];
