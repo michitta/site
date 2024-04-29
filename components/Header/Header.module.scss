@@ -1,8 +1,8 @@
 .header {
-  @apply flex px-[10px] py-[14px] items-center md:justify-between;
+  @apply flex sm:flex-row flex-col max-sm:gap-[20px] px-[10px] py-[14px] items-center md:justify-between;
 
   .leftSection {
-    @apply flex items-center gap-[20px] max-md:w-full;
+    @apply flex sm:flex-row flex-col items-center gap-[20px] max-md:w-full;
 
     > h1 {
       @apply text-[20px] font-bold dark:text-white text-black;
