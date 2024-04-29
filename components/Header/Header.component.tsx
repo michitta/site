@@ -2,6 +2,7 @@
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.scss';
 import Link from 'next/link';
+import ButtonComponent from '../Button/Button.component';
 
 export default function () {
     const path = usePathname();
@@ -11,14 +12,13 @@ export default function () {
             <div className={styles.leftSection}>
                 <h1>michitta space</h1>
                 <nav className={styles.navBar}>
-                    <Link href={'/'} className={path === '/' ? styles.active : ''}>Главная</Link>
-                    <Link href={'/about'} className={path === '/about' ? styles.active : ''}>Обо мне</Link>
-                    <Link href={'/blog'} className={path === '/blog' ? styles.active : ''}>Блог</Link>
-                    {/* <Link href={'/projects'} className={path === '/projects' ? styles.active : ''}>Проекты</Link> */}
-                    <Link href={'https://github.com/michitta'} className="after:content-['_↗']">GitHub</Link>
+                    <ButtonComponent href='/' active={path == "/"} className='header'>Главная</ButtonComponent>
+                    <ButtonComponent href='/about' active={path == "/about"} className='header'>Обо мне</ButtonComponent>
+                    <ButtonComponent href='/blog' active={path == "/blog"} className='header'>Блог</ButtonComponent>
+                    <ButtonComponent href='/projects' active={path == "/projects"} className='header'>Проекты</ButtonComponent>
                 </nav>
             </div>
-            <p>Тема привязана к твоему ПК! 😊</p>
+            <ButtonComponent href='https://github.com/michitta' className='header'>GitHub</ButtonComponent>
         </header >
     )
 }

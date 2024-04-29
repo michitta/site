@@ -1,0 +1,18 @@
+.header {
+  @apply rounded-[16px] px-[12px] py-[9px] border dark:border-label-5 border-label-5-w dark:text-white text-black text-[14px] font-semibold;
+
+  &:hover {
+    @apply dark:bg-background-1-t bg-background-1-t-w dark:border-label-3 border-label-3-w;
+  }
+
+  &:active {
+    @apply dark:bg-background-0-t bg-background-0-t-w dark:border-white border-label-1-w;
+  }
+}
+
+.active {
+  @apply dark:bg-background-0-t bg-background-0-t-w dark:border-white border-label-1-w;
+}
+
+.default {
+}

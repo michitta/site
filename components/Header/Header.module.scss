@@ -9,19 +9,7 @@
     }
 
     .navBar {
-      @apply flex gap-[14px] font-semibold text-[14px];
-
-      > a {
-        @apply dark:text-label-2 text-label-2-w transition-colors;
-
-        &:hover {
-          @apply dark:text-white text-black;
-        }
-      }
-
-      .active {
-        @apply dark:text-white text-black;
-      }
+      @apply flex gap-[10px] font-semibold text-[14px];
     }
   }
 
