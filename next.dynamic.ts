@@ -3,7 +3,6 @@ import { glob } from "glob";
 import { join, sep } from "node:path";
 import dynamic from "next/dynamic";
 
-export const cachedMardownFiles = new Map();
 export const cachedReactNodes = new Map();
 
 export const getMDXRoutes = async () => {
