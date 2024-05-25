@@ -7,10 +7,12 @@
   src: url("../public/Manrope-wght.woff2") format("woff2");
 }
 
-// max-w-screen-lg
-
 body {
-  @apply flex flex-col gap-[10px] h-screen justify-center dark:bg-black bg-white py-[10px] select-none p-[20px];
+  @apply flex justify-center dark:bg-black bg-white;
+}
+
+.container {
+  @apply flex flex-col h-screen gap-[10px] justify-center py-[10px] select-none p-[20px] md:w-[960px];
 }
 
 .main {
