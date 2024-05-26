@@ -13,8 +13,8 @@ export default function () {
                 <h1>michitta space</h1>
                 <nav className={styles.navBar}>
                     <ButtonComponent href='/' active={path == "/"} className='header'>Главная</ButtonComponent>
-                    <ButtonComponent href='/about' active={path == "/about"} className='header'>Кто я</ButtonComponent>
-                    <ButtonComponent href='/blog' active={path == "/blog"} className='header'>Блог</ButtonComponent>
+                    <ButtonComponent href='/about' active={path == "/about"} className='header'>Навыки</ButtonComponent>
+                    {/* <ButtonComponent href='/blog' active={path == "/blog"} className='header'>Блог</ButtonComponent> */}
                     <ButtonComponent href='/projects' active={path == "/projects"} className='header'>Проекты</ButtonComponent>
                 </nav>
             </div>
