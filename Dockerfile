@@ -1,4 +1,4 @@
-FROM oven/bun:alpine
+FROM mirror.gcr.io/oven/bun:alpine
 WORKDIR /app
 COPY . /app
 RUN bun i
