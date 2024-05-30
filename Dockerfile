@@ -1,4 +1,4 @@
-FROM oven/bun:alpine
+FROM registry.michitta-space.ru/oven/bun:alpine
 WORKDIR /app
 COPY . /app
 RUN bun i
