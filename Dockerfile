@@ -1,4 +1,4 @@
-FROM 172.17.0.1:5000/oven/bun:alpine
+FROM huecker.io/oven/bun:alpine
 WORKDIR /app
 COPY . /app
 RUN bun i
