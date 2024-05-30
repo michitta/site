@@ -1,4 +1,4 @@
-FROM oven/bun:alpine
+FROM 172.17.0.1:5000/oven/bun:alpine
 WORKDIR /app
 COPY . /app
 RUN bun i
