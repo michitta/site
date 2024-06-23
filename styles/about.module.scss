@@ -1,0 +1,7 @@
+.skill {
+  @apply flex flex-col sm:gap-[12px] gap-[20px];
+}
+
+.tag {
+  @apply flex sm:flex-row flex-col gap-[10px] sm:items-center;
+}

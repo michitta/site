@@ -1,0 +1,31 @@
+.default {
+  @apply border p-4 flex gap-2 rounded-[12px] select-none items-center;
+
+  > p {
+    @apply dark:text-white text-black;
+  }
+}
+
+.warn {
+  @apply dark:bg-yellow-600/20 bg-yellow-300/20 dark:border-yellow-400/20 border-yellow-100/20;
+
+  > svg {
+    @apply dark:fill-yellow-400/40 fill-yellow-100/40;
+  }
+}
+
+.error {
+  @apply dark:bg-red-600/20 bg-red-300/20 dark:border-red-400/20 border-red-100/20;
+
+  > svg {
+    @apply dark:fill-red-400/40 fill-red-100/40;
+  }
+}
+
+.success {
+  @apply dark:bg-green-600/20 bg-green-300/20 dark:border-green-400/20 border-green-100/20;
+
+  > svg {
+    @apply dark:fill-green-400/40 fill-green-100/40;
+  }
+}
