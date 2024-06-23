@@ -1,20 +1,90 @@
+import HintComponent from "@/components/Hint/Hint.component";
+import { TagHintColor } from "@/enums";
+import {
+  nekoBackend,
+  nekoFrontend,
+  climateBackend,
+  climateFrontend,
+} from "@/constus";
+import TagsComponent from "@/components/Tags/Tags.component";
+import styles from "@/styles/about.module.scss";
+import Link from "next/link";
+
 # Проекты
 
-## Neko launcher
+Все проекты перечисленные ниже полностью разработаны мной.
 
-Лаунчер, написанный на TS и Rust.
+### Лаунчер Neko
 
-Стэк backend:
+Лаунчер по игре minecraft (для проектов)
 
-- Nest.JS
-- Minio S3
-- Socket.IO
+#### Функциональные особенности
 
-Стэк frontend:
+1. Выполнять авторизацию на собственном сервере
+2. Кастомизировать персонажа (Скины / Плащи (+HD))
+3. Кастомизировать внешний вид лаунчера от цвета, до заднего фона (image / gif)
+4. Совершать покупки в лаунчере через встроенную систему Neko Pay или через платёжную систему YooKassa
+5. Добавлять сервера других проектов по uuid
+6. Удалять сервера из своего списка (если они не привязаны к ревизии лаунчера или не глобальные)
 
-- React / Vite
-- Socket.IO
-- TailwindCSS
-- SCSS
-- Tauri
-- Rust (большая часть работы выполняется на нём)/ TypeScript (в основном - визуал)
+#### Технические особенности
+
+<div className={styles.skill}>
+  <div className={styles.tag}>
+    <p>Backend</p>
+  </div>
+  <TagsComponent obj={nekoBackend} />
+</div>
+
+<div className={styles.skill}>
+  <div className={styles.tag}>
+    <p>Frontend</p>
+  </div>
+  <TagsComponent obj={nekoFrontend} />
+</div>
+
+P.S. Большая часть работы выполняется на Rust, TypeScript - визуал
+
+#### Дизайнерские особенности
+
+1. Neko UI (Разработан для Neko Launcher + частично используется на michitta-space.ru)
+
+#### Просмотр
+
+- Посмотреть на работу neko-launcher можно по ссылке <Link href="https://yami.town">yami.town</Link>
+
+<br />
+
+### Сайт Climate Expo
+
+Сайт-визитка с возможностью редактирования (через админ-панель)
+
+#### Функциональные особенности
+
+1. Возможность создания / редактирования / удаления информации с сайта
+2. Авторизация / Восстановление пароля (с отправкой кода на почту) в админ-панель
+3. Загрузка изображений на сервер в Minio S3
+
+#### Технические особенности
+
+<div className={styles.skill}>
+  <div className={styles.tag}>
+    <p>Backend</p>
+  </div>
+  <TagsComponent obj={climateBackend} />
+</div>
+
+<div className={styles.skill}>
+  <div className={styles.tag}>
+    <p>Frontend</p>
+  </div>
+  <TagsComponent obj={climateFrontend} />
+</div>
+
+#### Дизайнерские особенности
+
+1. Цвета tailwindcss
+
+#### Просмотр
+
+- Посмотреть на работу climate-expo можно по ссылке <Link href="https://climate-expo.ru">climate-expo.ru</Link>

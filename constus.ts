@@ -115,3 +115,95 @@ export const educations: skill[] = [
     color: TagHintColor.YELLOW,
   },
 ];
+
+export const nekoBackend: skill[] = [
+  {
+    name: "Nest.JS",
+  },
+  {
+    name: "Minio S3",
+  },
+  {
+    name: "Socket.IO",
+  },
+  {
+    name: "Redis",
+  },
+  {
+    name: "PostgreSQL",
+  },
+  {
+    name: "TypeScript",
+    color: TagHintColor.YELLOW,
+  },
+];
+
+export const nekoFrontend: skill[] = [
+  {
+    name: "React",
+  },
+  {
+    name: "Vite",
+  },
+  {
+    name: "Socket.IO",
+  },
+  {
+    name: "TailwindCSS",
+  },
+  {
+    name: "Redux",
+  },
+  {
+    name: "SCSS",
+  },
+  {
+    name: "Tauri",
+  },
+  {
+    name: "Rust",
+    color: TagHintColor.YELLOW,
+  },
+  {
+    name: "TypeScript",
+    color: TagHintColor.YELLOW,
+  },
+];
+
+export const climateBackend: skill[] = [
+  {
+    name: "Nest.JS",
+  },
+  {
+    name: "Minio S3",
+  },
+  {
+    name: "PostgreSQL",
+  },
+  {
+    name: "TypeScript",
+    color: TagHintColor.YELLOW,
+  },
+];
+
+export const climateFrontend: skill[] = [
+  {
+    name: "React",
+  },
+  {
+    name: "Next.JS",
+  },
+  {
+    name: "Redux",
+  },
+  {
+    name: "TailwindCSS",
+  },
+  {
+    name: "SCSS",
+  },
+  {
+    name: "TypeScript",
+    color: TagHintColor.YELLOW,
+  },
+];

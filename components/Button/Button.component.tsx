@@ -4,6 +4,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 export default async function ({ href, active, className, children }: { href: string; active?: boolean, className?: string; children?: ReactNode }) {
+
     const style = className ? styles?.[className] : styles.default;
     const name = active ? clsx(style, styles.active) : style;
 
