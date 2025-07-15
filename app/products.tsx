@@ -34,7 +34,7 @@ export default [
             </ul>
         </div>,
         icons: ["ts", "rust", "tauri", "react", "tailwindcss", "docker", "figma", "vite", "redux", "portainer", "redis", "git", "sass", "postgresql", "socketio", "linux", "nginx", "nest", "bun"],
-        image: "/bg.webp",
+        image: "/neko.webp",
         links: {
             site: undefined,
             figma: undefined,
@@ -71,7 +71,7 @@ export default [
             </ul>
         </div>,
         icons: ["ts", "react", "tailwindcss", "docker", "figma", "portainer", "git", "sass", "nextjs", "linux", "nginx"],
-        image: "/bg.webp",
+        image: "/climate.webp",
         links: {
             site: "https://climate-expo.ru",
         }
@@ -106,7 +106,7 @@ export default [
             </ul>
         </div>,
         icons: ["ts", "react", "tailwindcss", "docker", "figma", "vite", "git", "sass", "postgresql", "linux", "nginx", "nest"],
-        image: "/bg.webp",
+        image: "/ks54-front.webp",
         links: {
             site: undefined,
             figma: "https://www.figma.com/design/fJ4fJve0qLdTZpWQtMzFGK/KS54-some-projects-by-michitta?node-id=0-1&t=aOXsd5n6VLJqaYqs-1",
@@ -114,7 +114,8 @@ export default [
         }
     },
     {
-        time: "December 2023",
+        time: "Декабрь 2023",
+        timeEn: "December 2023",
         title: "Сайт-редактор резюме",
         titleEn: "Resume editor website.",
         description: <div className="flex flex-col font-medium text-base dark:text-label-2 text-label-2-w">
@@ -142,7 +143,7 @@ export default [
             </ul>
         </div>,
         icons: ["ts", "react", "tailwindcss", "docker", "figma", "vite", "git", "sass", "postgresql", "linux", "nginx", "nest"],
-        image: "/bg.webp",
+        image: "/ks54-resume-front.webp",
         links: {
             site: undefined,
             figma: "https://www.figma.com/design/fJ4fJve0qLdTZpWQtMzFGK/KS54-some-projects-by-michitta?node-id=0-1&t=aOXsd5n6VLJqaYqs-1",

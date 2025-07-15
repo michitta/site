@@ -4,6 +4,7 @@ import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope",
+  subsets: ["cyrillic"]
 });
 
 export const metadata: Metadata = {
