@@ -1,7 +1,0 @@
-.tags {
-  @apply flex flex-wrap gap-[10px];
-
-  .tag {
-    @apply flex items-center border dark:border-label-5 border-label-5-w rounded-[24px] px-[10px] py-[8px] dark:text-white text-black text-[16px] font-medium;
-  }
-}

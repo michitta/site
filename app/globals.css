@@ -1,0 +1,21 @@
+@import "./tailwind.css";
+
+* {
+  font-family: var(--font-manrope);
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply flex flex-col dark:bg-black bg-white gap-5 p-5 select-none overflow-x-hidden;
+}
+
+.link {
+  @apply font-bold text-sm text-indigo-300 hover:text-indigo-400 transition-colors;
+}
+
+.button {
+  @apply flex px-3 py-2 rounded-full dark:text-white text-black dark:hover:text-label-2 hover:text-label-2-w transition-colors;
+}
