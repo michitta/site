@@ -70,7 +70,7 @@ export default function HeaderComponent() {
 
 
     return (
-        <header className="fixed flex w-full px-8 items-center">
+        <header className="fixed flex w-full px-8 items-center z-10">
             <section className="flex flex-1">
                 <p className="dark:text-white text-black text-xl font-bold">michitta's space ✨</p>
             </section>

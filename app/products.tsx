@@ -29,7 +29,7 @@ export default [
         image: "/bg.webp",
         links: {
             site: undefined,
-            figma: "https://figma.com",
+            figma: undefined,
             github: undefined
         }
     },
@@ -39,6 +39,9 @@ export default [
         description: "",
         icons: ["ts", "react", "tailwindcss", "docker", "figma", "portainer", "git", "sass", "nextjs", "linux", "nginx"],
         image: "/bg.webp",
+        links: {
+            site: "https://climate-expo.ru",
+        }
     },
     {
         time: "Август 2023 - настоящее время",
@@ -46,6 +49,11 @@ export default [
         description: "",
         icons: ["ts", "react", "tailwindcss", "docker", "figma", "vite", "git", "sass", "postgresql", "linux", "nginx", "nest"],
         image: "/bg.webp",
+        links: {
+            site: undefined,
+            figma: undefined,
+            github: undefined
+        }
     },
     {
         time: "Август 2023 - настоящее время",
@@ -53,5 +61,10 @@ export default [
         description: "",
         icons: ["ts", "react", "tailwindcss", "docker", "figma", "vite", "git", "sass", "postgresql", "linux", "nginx", "nest"],
         image: "/bg.webp",
+        links: {
+            site: undefined,
+            figma: undefined,
+            github: undefined
+        }
     }
 ]
