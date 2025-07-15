@@ -4,14 +4,13 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from "next/link";
-import { CaretDownIcon } from "@phosphor-icons/react/dist/ssr";
-import getLangText from "../lang";
+import { langTextType } from "../types/global.types";
 
-export default function HeaderComponent() {
+export default function HeaderComponent({ langText } : { langText: langTextType }) {
     const router = useRouter();
     const searchParams = useSearchParams();
 
-    const [popupActive, setPopupActive] = useState(false);
+    // const [popupActive, setPopupActive] = useState(false);
 
     const [hash, setHash] = useState(typeof location !== 'undefined' ? location.hash : '');
 
@@ -24,11 +23,11 @@ export default function HeaderComponent() {
 
     const sliderButtons = [
         {
-            label: getLangText("en", "Home"),
+            label: langText.Home,
             id: "#Home",
         },
         {
-            label: getLangText("en", "Projects"),
+            label: langText.Projects,
             id: "#Projects",
         }
     ];
@@ -71,42 +70,42 @@ export default function HeaderComponent() {
         });
     }, [tab]);
 
-    const dropDownMenuRef = useRef(null);
-    const buttonRef = useRef(null);
+    // const dropDownMenuRef = useRef(null);
+    // const buttonRef = useRef(null);
 
-    useEffect(() => {
-        const handleClickOutside = (e: MouseEvent) => {
-            const { current: menu } = dropDownMenuRef;
-            const { current: button } = buttonRef;
+    // useEffect(() => {
+    //     const handleClickOutside = (e: MouseEvent) => {
+    //         const { current: menu } = dropDownMenuRef;
+    //         const { current: button } = buttonRef;
 
-            if (
-                menu &&
-                button &&
-                !(menu as any).contains(e.target) &&
-                e.target !== button &&
-                !(button as any).contains(e.target)
-            ) {
-                setPopupActive(false);
-            }
-        };
+    //         if (
+    //             menu &&
+    //             button &&
+    //             !(menu as any).contains(e.target) &&
+    //             e.target !== button &&
+    //             !(button as any).contains(e.target)
+    //         ) {
+    //             setPopupActive(false);
+    //         }
+    //     };
 
-        const handleScroll = (e: Event) => {
-            console.log(e)
-            // document.addEventListener('scroll', () => {
-            //     if (window.pageYOffset < 150) {
-            //         history.replaceState(null, null, window.location.pathname);
-            //         setHash('')
-            //     }
-            // })
-        };
+    //     const handleScroll = (e: Event) => {
+    //         console.log(e)
+    //         // document.addEventListener('scroll', () => {
+    //         //     if (window.pageYOffset < 150) {
+    //         //         history.replaceState(null, null, window.location.pathname);
+    //         //         setHash('')
+    //         //     }
+    //         // })
+    //     };
 
-        document.addEventListener('mousedown', handleClickOutside);
-        document.addEventListener('scroll', handleScroll);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside)
-            document.removeEventListener('scroll', handleScroll)
-        };
-    }, []);
+    //     document.addEventListener('mousedown', handleClickOutside);
+    //     document.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         document.removeEventListener('mousedown', handleClickOutside)
+    //         document.removeEventListener('scroll', handleScroll)
+    //     };
+    // }, []);
 
     return (
         <header className="fixed flex w-full px-8 items-center z-10">
@@ -129,7 +128,7 @@ export default function HeaderComponent() {
             </section>
             <section className="relative flex flex-1 justify-end text-sm font-semibold dark:text-white text-black">
                 <Link className="button" href="mailto:kot.michail.ru@yandex.ru">
-                    {getLangText("en", "SendMail")}
+                    {langText.SendMail}
                 </Link>
                 <Link className="button" href="https://t.me/michitto">
                     Telegram
@@ -137,10 +136,11 @@ export default function HeaderComponent() {
                 <Link className="button" href="https://github.com/michitta">
                     GitHub
                 </Link>
-                <button ref={buttonRef} onClick={() => setPopupActive(state => !state)} className="button cursor-pointer flex gap-1.5 items-center">
+                {/* TODO: Нужно допилить эту часть кода после релиза. Future drop так сказать */}
+                {/* <button ref={buttonRef} onClick={() => setPopupActive(state => !state)} className="button cursor-pointer flex gap-1.5 items-center">
                     EN <CaretDownIcon size={12} />
-                </button>
-                <AnimatePresence>
+                </button> */}
+                {/* <AnimatePresence>
                     {popupActive &&
                         <motion.div
                             ref={dropDownMenuRef}
@@ -152,7 +152,7 @@ export default function HeaderComponent() {
                             English
                         </motion.div>
                     }
-                </AnimatePresence>
+                </AnimatePresence> */}
             </section>
         </header>
     )
