@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
-import { useRouter, useSearchParams }  from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from "next/link";
 import { CaretDownIcon } from "@phosphor-icons/react/dist/ssr";
 import getLangText from "../lang";
@@ -14,7 +14,7 @@ export default function HeaderComponent() {
     const [popupActive, setPopupActive] = useState(false);
 
     const [hash, setHash] = useState(typeof location !== 'undefined' ? location.hash : '');
-    
+
     const [className, setClassName] = useState({
         transform: `translateX(0px)`,
         width: `100%`,
@@ -41,9 +41,9 @@ export default function HeaderComponent() {
 
     const setTabRef =
         (index: number) =>
-        (el: HTMLButtonElement | null): void => {
-            tabRefs.current[index] = el;
-    };
+            (el: HTMLButtonElement | null): void => {
+                tabRefs.current[index] = el;
+            };
 
     useEffect(() => {
         if (!location.hash) return;
@@ -90,10 +90,23 @@ export default function HeaderComponent() {
             }
         };
 
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+        const handleScroll = (e: Event) => {
+            console.log(e)
+            // document.addEventListener('scroll', () => {
+            //     if (window.pageYOffset < 150) {
+            //         history.replaceState(null, null, window.location.pathname);
+            //         setHash('')
+            //     }
+            // })
+        };
 
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('scroll', handleScroll);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+            document.removeEventListener('scroll', handleScroll)
+        };
+    }, []);
 
     return (
         <header className="fixed flex w-full px-8 items-center z-10">
@@ -125,18 +138,18 @@ export default function HeaderComponent() {
                     GitHub
                 </Link>
                 <button ref={buttonRef} onClick={() => setPopupActive(state => !state)} className="button cursor-pointer flex gap-1.5 items-center">
-                    EN <CaretDownIcon size={12}/>
+                    EN <CaretDownIcon size={12} />
                 </button>
                 <AnimatePresence>
-                    {popupActive && 
+                    {popupActive &&
                         <motion.div
                             ref={dropDownMenuRef}
                             initial={{ opacity: 0, y: -20, scale: 0 }}
-                            animate={{ opacity: 1, y: 0, scale: 1  }}
-                            exit={{ opacity: 0, y: -20, scale: 0  }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -20, scale: 0 }}
                             className="absolute top-10 flex p-2 dark:bg-1-t bg-1-t-w border dark:border-label-5 border-label-5-w rounded-xl backdrop-blur-2xl">
-                                Русский<br/>
-                                English
+                            Русский<br />
+                            English
                         </motion.div>
                     }
                 </AnimatePresence>
