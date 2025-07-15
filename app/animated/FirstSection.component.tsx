@@ -15,7 +15,7 @@ export default function FirstSection() {
         transition={{
             duration: 0.5,
         }}
-        className="max-w-6xl h-screen flex flex-col justify-between px-16 py-44">
+        className="max-w-6xl h-screen flex flex-col justify-between px-16 py-42">
             <div className="flex flex-col gap-12 items-center text-center">
                 <div className="flex flex-col gap-4 items-center">
                 <p className="font-bold max-lg:text-lg text-2xl dark:text-white text-black">Hello, I’m Michail 👋</p>
