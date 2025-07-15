@@ -3,6 +3,7 @@
 import { CaretDownIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import getLangText from "../lang";
 
 export default function FirstSection() {
     const icons = ["ts", "js", "rust", "tauri", "react", "tailwindcss", "docker", "figma", "vite", "redux", "css", "html", "portainer", "redis", "git", "sass", "photoshop", "nextjs", "github", "postgresql", "electron", "socketio", "linux", "nginx", "nest", "bun"];
@@ -18,18 +19,18 @@ export default function FirstSection() {
         className="max-w-6xl h-screen flex flex-col justify-between px-16 py-42">
             <div className="flex flex-col gap-12 items-center text-center">
                 <div className="flex flex-col gap-4 items-center">
-                <p className="font-bold max-lg:text-lg text-2xl dark:text-white text-black">Hello, I’m Michail 👋</p>
-                <h1 className="font-bold max-2xl:text-5xl text-8xl text-transparent bg-clip-text bg-gradient-to-b dark:from-[#00000002] from-[#ffffff02] dark:to-white to-black">Fullstack Developer</h1>
+                <p className="font-bold max-lg:text-lg text-2xl dark:text-white text-black">{getLangText("en", "HelloText")}</p>
+                <h1 className="font-bold max-2xl:text-5xl text-8xl text-transparent bg-clip-text bg-gradient-to-b dark:from-[#00000002] from-[#ffffff02] dark:to-white to-black">{getLangText("en", "DeveloperText")}</h1>
                 </div>
                 <h2 className="font-bold max-lg:text-lg text-2xl text-transparent bg-clip-text bg-gradient-to-b dark:from-[#00000002] from-[#ffffff02] dark:to-white to-black">
-                The development of web applications using the following technologies
+                    {getLangText("en", "DevelopedDescription")}
                 </h2>
                 <div className="flex flex-wrap gap-2.5 w-[536px]">
                 {icons.map((icon, key) => <Image width={32} height={32} alt={icon + "_icon"} key={key} src={"/icons/" + icon + ".svg"}/>)}
                 </div>
             </div>
             <div className="flex flex-col gap-2 items-center text-center">
-                <p className="font-bold dark:text-label-2 text-label-2-w text-sm">Scroll down to see the developed products</p>
+                <p className="font-bold dark:text-label-2 text-label-2-w text-sm">{getLangText("en", "ScrollText")}</p>
                 <CaretDownIcon className="dark:fill-label-2 fill-label-2-w" size={16}/>
             </div>
     </motion.section>

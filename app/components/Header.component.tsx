@@ -1,14 +1,17 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams }  from 'next/navigation';
 import Link from "next/link";
-import clsx from "clsx";
+import { CaretDownIcon } from "@phosphor-icons/react/dist/ssr";
+import getLangText from "../lang";
 
 export default function HeaderComponent() {
     const router = useRouter();
-    const searchParams = useSearchParams()
+    const searchParams = useSearchParams();
+
+    const [popupActive, setPopupActive] = useState(false);
 
     const [hash, setHash] = useState(typeof location !== 'undefined' ? location.hash : '');
     
@@ -21,11 +24,11 @@ export default function HeaderComponent() {
 
     const sliderButtons = [
         {
-            label: "Home",
+            label: getLangText("en", "Home"),
             id: "#Home",
         },
         {
-            label: "Projects",
+            label: getLangText("en", "Projects"),
             id: "#Projects",
         }
     ];
@@ -68,6 +71,29 @@ export default function HeaderComponent() {
         });
     }, [tab]);
 
+    const dropDownMenuRef = useRef(null);
+    const buttonRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            const { current: menu } = dropDownMenuRef;
+            const { current: button } = buttonRef;
+
+            if (
+                menu &&
+                button &&
+                !(menu as any).contains(e.target) &&
+                e.target !== button &&
+                !(button as any).contains(e.target)
+            ) {
+                setPopupActive(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
 
     return (
         <header className="fixed flex w-full px-8 items-center z-10">
@@ -88,9 +114,9 @@ export default function HeaderComponent() {
                         </button>
                 )}
             </section>
-            <section className="flex flex-1 justify-end text-sm font-semibold dark:text-white text-black">
+            <section className="relative flex flex-1 justify-end text-sm font-semibold dark:text-white text-black">
                 <Link className="button" href="mailto:kot.michail.ru@yandex.ru">
-                    Send mail
+                    {getLangText("en", "SendMail")}
                 </Link>
                 <Link className="button" href="https://t.me/michitto">
                     Telegram
@@ -98,6 +124,22 @@ export default function HeaderComponent() {
                 <Link className="button" href="https://github.com/michitta">
                     GitHub
                 </Link>
+                <button ref={buttonRef} onClick={() => setPopupActive(state => !state)} className="button cursor-pointer flex gap-1.5 items-center">
+                    EN <CaretDownIcon size={12}/>
+                </button>
+                <AnimatePresence>
+                    {popupActive && 
+                        <motion.div
+                            ref={dropDownMenuRef}
+                            initial={{ opacity: 0, y: -20, scale: 0 }}
+                            animate={{ opacity: 1, y: 0, scale: 1  }}
+                            exit={{ opacity: 0, y: -20, scale: 0  }}
+                            className="absolute top-10 flex p-2 dark:bg-1-t bg-1-t-w border dark:border-label-5 border-label-5-w rounded-xl backdrop-blur-2xl">
+                                Русский<br/>
+                                English
+                        </motion.div>
+                    }
+                </AnimatePresence>
             </section>
         </header>
     )
