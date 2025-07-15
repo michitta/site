@@ -7,7 +7,7 @@ export default [
         description: <div className="flex flex-col font-medium text-base dark:text-label-2 text-label-2-w">
             <p>
                 Настольное приложение для запуска модифицированных игровых клиентов по игре<br/>
-                minecraft.<br/><br/>
+                minecraft<br/><br/>
                 Особенности:<br/>
             </p>
             <ul className="pl-7 list-disc">
@@ -21,7 +21,7 @@ export default [
         </div>,
         descriptionEn: <div className="flex flex-col font-medium text-base dark:text-label-2 text-label-2-w">
             <p>
-                A desktop application for running modified minecraft game clients.<br/><br/>
+                A desktop application for running modified minecraft game clients<br/><br/>
                 Features:<br/>
             </p>
             <ul className="pl-7 list-disc">
@@ -80,7 +80,7 @@ export default [
         time: "Июнь 2024",
         timeEn: "June 2024",
         title: "Сайт для отображения и редактирования расписания",
-        titleEn: "A website for displaying and editing schedules.",
+        titleEn: "A website for displaying and editing schedules",
         description: <div className="flex flex-col font-medium text-base dark:text-label-2 text-label-2-w">
             <p>
                 Сайт был разработан в рамках хакатона.<br/><br/>
@@ -95,7 +95,7 @@ export default [
         </div>,
         descriptionEn: <div className="flex flex-col font-medium text-base dark:text-label-2 text-label-2-w">
             <p>
-                The website was developed as part of a hackathon.<br/><br/>
+                The website was developed as part of a hackathon<br/><br/>
                 Features:<br/>
             </p>
             <ul className="pl-7 list-disc">
@@ -132,7 +132,7 @@ export default [
         </div>,
         descriptionEn: <div className="flex flex-col font-medium text-base dark:text-label-2 text-label-2-w">
             <p>
-                The website was developed as part of a hackathon.<br/><br/>
+                The website was developed as part of a hackathon<br/><br/>
                 Features:<br/>
             </p>
             <ul className="pl-7 list-disc">

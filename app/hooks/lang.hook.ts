@@ -3,6 +3,8 @@ import { headers } from "next/headers";
 export default async function useLangText() {
     const headersList = await headers();
 
+    console.log(headersList.values())
+
     let code = headersList.get('CF-IPCountry') == 'ru' ? "ru" : "en"
 
     return {
