@@ -22,8 +22,8 @@ export default async function Home() {
           <p className="font-semibold text-base dark:text-label-2 text-label-2-w">{langText.DevelopedDescription}</p>
         </div>
         <div className="flex flex-col gap-4">
-          {products.map((product, key) => <ProductComponent key={key} time={product.time} title={product.title}
-          description={product.description} icons={product.icons} image={product.image} links={product.links} /> )}
+          {products.map((product, key) => <ProductComponent key={key} time={code == "ru" ? product.time : product.timeEn} title={code == "ru" ? product.title : product.titleEn}
+            description={code == "ru" ? product.description : product.descriptionEn} icons={product.icons} image={product.image} links={product.links} /> )}
         </div>
       </section>
     </main>
