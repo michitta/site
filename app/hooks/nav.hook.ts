@@ -12,8 +12,9 @@ export default function useNav() {
 
     const observerOptions = {
       root: null,
-      rootMargin: "-25% 0px -25% 0px",
-      threshold: 0,
+      rootMargin: "0px",
+      threshold: 0.01,
+      scrollMargin: `10px`,
     };
 
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
