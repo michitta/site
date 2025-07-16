@@ -4,7 +4,7 @@ import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope",
-  subsets: ["cyrillic"]
+  subsets: ["cyrillic"],
 });
 
 export const metadata: Metadata = {
@@ -19,10 +19,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body
-        id="Home"
-        className={`${manrope.variable} antialiased`}
-      >
+      <body id="Home" className={`${manrope.variable} antialiased`}>
         {children}
       </body>
     </html>
