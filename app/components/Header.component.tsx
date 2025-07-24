@@ -112,13 +112,13 @@ export default function HeaderComponent({
   // }, []);
 
   return (
-    <header className="fixed flex w-full px-8 items-center z-10">
+    <header className="fixed flex max-sm:flex-col max-sm:gap-3 w-full max-sm:px-2 py-5 px-8 items-center z-10 bg-gradient-to-b from-black to-transparent">
       <section className="flex flex-1">
         <p className="dark:text-white text-black text-xl font-bold">
           michitta's space ✨
         </p>
       </section>
-      <section className="flex p-1 rounded-full dark:bg-1-t bg-1-t-w border dark:border-label-5 border-label-5-w backdrop-blur-2xl">
+      <section className="max-sm:hidden flex p-1 rounded-full dark:bg-1-t bg-1-t-w border dark:border-label-5 border-label-5-w backdrop-blur-2xl">
         <motion.div
           animate={className}
           className="w-full h-full top-0 left-0 absolute dark:bg-3-t bg-3-t-w rounded-4xl border dark:border-label-5 border-label-5-w"
@@ -135,6 +135,12 @@ export default function HeaderComponent({
         ))}
       </section>
       <section className="relative flex flex-1 justify-end text-sm font-semibold dark:text-white text-black">
+        <Link
+          className="button"
+          href="https://status.michitta-space.ru/status/services"
+        >
+          {langText.Statuses}
+        </Link>
         <Link className="button" href="mailto:kot.michail.ru@yandex.ru">
           {langText.SendMail}
         </Link>

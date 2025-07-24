@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  @apply flex flex-col dark:bg-black bg-white gap-5 p-5 select-none overflow-x-hidden;
+  @apply flex flex-col dark:bg-black bg-white gap-5 max-sm:px-3 px-5 select-none overflow-x-hidden;
 }
 
 .link {

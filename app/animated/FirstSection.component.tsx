@@ -44,26 +44,27 @@ export default function FirstSection({ langText }: { langText: langTextType }) {
       transition={{
         duration: 0.5,
       }}
-      className="max-w-7xl h-screen flex flex-col justify-between px-16 py-42"
+      className="max-sm:max-w-full max-w-7xl h-screen flex flex-col justify-between px-16 max-sm:px-1 py-56 max-sm:pt-64 max-sm:pb-14 scroll-m-20"
     >
-      <div className="flex flex-col gap-12 items-center text-center">
+      <div className="flex flex-col max-sm:gap-6 gap-12 items-center text-center">
         <div className="flex flex-col gap-4 items-center">
           <p className="font-bold max-lg:text-lg text-2xl dark:text-white text-black">
             {langText.HelloText}
           </p>
-          <h1 className="font-bold max-2xl:text-5xl text-8xl text-transparent bg-clip-text bg-gradient-to-b dark:from-[#00000002] from-[#ffffff02] dark:to-white to-black">
+          <h1 className="font-bold max-sm:text-4xl max-2xl:text-5xl text-8xl text-transparent bg-clip-text bg-gradient-to-b dark:from-[#00000002] from-[#ffffff02] dark:to-white to-black">
             {langText.DeveloperText}
           </h1>
         </div>
-        <h2 className="font-bold max-lg:text-lg text-2xl text-transparent bg-clip-text bg-gradient-to-b dark:from-[#00000002] from-[#ffffff02] dark:to-white to-black">
+        <h2 className="font-bold max-sm:text-sm max-lg:text-lg text-2xl text-transparent bg-clip-text bg-gradient-to-b dark:from-[#00000002] from-[#ffffff02] dark:to-white to-black">
           {langText.DevelopedDescription}
         </h2>
-        <div className="flex flex-wrap gap-2.5 w-[536px]">
+        <div className="flex justify-center flex-wrap gap-2.5 max-w-[536px]">
           {icons.map((icon, key) => (
             <Image
               width={32}
               height={32}
               alt={icon + "_icon"}
+              className="max-sm:size-7"
               key={key}
               src={"/icons/" + icon + ".svg"}
             />
