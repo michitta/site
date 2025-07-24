@@ -20,10 +20,10 @@ export default async function Home() {
         className="flex flex-col gap-12 max-2xl:px-1 px-16 py-24 items-center text-center scroll-m-20"
       >
         <div className="flex flex-col gap-2">
-          <h1 className="font-bold max-sm:text-3xl text-4xl dark:text-white text-black">
+          <h1 className="font-bold max-md:text-3xl text-4xl dark:text-white text-black">
             {langText.DevelopedText}
           </h1>
-          <p className="font-semibold max-sm:text-sm text-base dark:text-label-2 text-label-2-w">
+          <p className="font-semibold max-md:text-sm text-base dark:text-label-2 text-label-2-w">
             {langText.DevelopedDescription}
           </p>
         </div>
