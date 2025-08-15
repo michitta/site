@@ -10,7 +10,7 @@ export default async function useLangText() {
     langText: {
       Home: code == "ru" ? "Главная" : "Home",
       Projects: code == "ru" ? "Проекты" : "Projects",
-      SendMail: code == "ru" ? "Отправить письмо" : "Send mail",
+      SendMail: code == "ru" ? "Написать мне" : "Email me",
       Statuses: code == "ru" ? "Статусы" : "Statuses",
 
       // First section

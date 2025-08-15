@@ -22,11 +22,8 @@ export default function NoticeComponent() {
           convenience!
         </h2>
         <p className="font-semibold max-md:text-xs text-sm dark:text-label-2 text-label-2-w">
-          Information is provided by cloudflare.{" "}
-          <Link
-            className="link"
-            href="https://developers.cloudflare.com/fundamentals/reference/http-headers/"
-          >
+          Information is provided by maxmind.{" "}
+          <Link className="link" href="https://www.maxmind.com/en/home">
             Learn more
           </Link>
         </p>
